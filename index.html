@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>אבני דרך בחינוך המיוחד</title>
+  <style>
+    body {
+      direction: rtl;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .centered {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: -webkit-xxx-large
+    }
+
+    .zoom {
+      position: absolute;
+      top: 70%;
+      left: 26%;
+      transform: translate(-50%, -50%);
+      font-size: -webkit-xxx-large
+    }
+  </style>
+  <script>
+    (function () {
+      const countDownDate = new Date("Apr 08, 2022 19:09:00").getTime();
+      let x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "שבת שלום והרבה מזל טוב  ";
+          document.getElementById("zoomDetails").innerHTML = ".";
+        }
+      }, 1000)
+    }());
+  </script>
+</head>
+
+<body>
+  <div style="direcion: rtl;">
+    <div class="container">
+      <h1 style=" text-align: center" id="headline">אבני דרך בחינוך המיוחד</h1>
+      <img src="images/IMG_1406.JPG" style="width:100%;">
+      <p class="centered" id="countdown">
+      <p class="zoom" id="zoomDetails" <a href="http://www.ynet.co.il"> </a>
+      </p>
+      <href>
+        </p>
+    </div>
+  </div>
+</body>
+
+</html>
